@@ -28,3 +28,17 @@
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
+
+
+---
+
+## Overview
+
+**FinOps** is a personal finance tracker that allows users to manage expenses and income. The goal of this project is not just the application itself, but to demonstrate a **complete DevOps lifecycle**:
+
+- Containerized microservices (Docker)
+- Automated CI/CD pipeline (GitHub Actions)
+- Infrastructure as Code (Docker Compose)
+- Automated testing (pytest + Jest)
+- Observability stack (Prometheus + Grafana)
+- Professional documentation
