@@ -49,14 +49,21 @@
 ## Architecture
 
 ## Architecture
+
 ```mermaid
 graph TB
+    subgraph "CI/CD — GitHub Actions"
+        PUSH[Git Push] --> LINT[Lint & Test]
+        LINT --> BUILD[Build Docker Images]
+        BUILD --> PUSH_REG[Push to GHCR]
+    end
+
     subgraph "Docker Network"
-        FE[FrontendReact + Nginx:3000]
-        BE[BackendFastAPI:8000]
-        DB[(PostgreSQL:5432)]
-        PROM[Prometheus:9090]
-        GRAF[Grafana:3001]
+        FE[Frontend<br/>React + Nginx<br/>:3000]
+        BE[Backend<br/>FastAPI<br/>:8000]
+        DB[(PostgreSQL<br/>:5432)]
+        PROM[Prometheus<br/>:9090]
+        GRAF[Grafana<br/>:3001]
     end
 
     USER((User)) --> FE
@@ -64,10 +71,14 @@ graph TB
     BE -->|Queries| DB
     PROM -->|Scrape /metrics| BE
     GRAF -->|Query| PROM
+    PUSH_REG -.->|Deploy| FE
+    PUSH_REG -.->|Deploy| BE
 
     style FE fill:#61DAFB,stroke:#333,color:#000
     style BE fill:#009688,stroke:#333,color:#fff
     style DB fill:#4169E1,stroke:#333,color:#fff
     style PROM fill:#E6522C,stroke:#333,color:#fff
     style GRAF fill:#F46800,stroke:#333,color:#fff
+    style PUSH fill:#333,stroke:#fff,color:#fff
+    style PUSH_REG fill:#28a745,stroke:#333,color:#fff
 ```
