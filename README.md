@@ -82,3 +82,19 @@ graph TB
     style PUSH fill:#333,stroke:#fff,color:#fff
     style PUSH_REG fill:#28a745,stroke:#333,color:#fff
 ```
+
+
+---
+
+## Tech Stack
+
+| Layer          | Technology        | Purpose                        |
+|----------------|-------------------|--------------------------------|
+| Frontend       | React + Nginx     | User interface & static serve  |
+| Backend        | Python + FastAPI  | REST API                       |
+| Database       | PostgreSQL        | Data persistence               |
+| Containers     | Docker + Compose  | Service orchestration          |
+| CI/CD          | GitHub Actions    | Automated pipeline             |
+| Monitoring     | Prometheus        | Metrics collection             |
+| Dashboards     | Grafana           | Metrics visualization          |
+| Testing        | pytest + Jest     | Unit & integration tests       |
