@@ -48,8 +48,6 @@
 
 ## Architecture
 
-## Architecture
-
 ```mermaid
 graph TB
     subgraph "CI/CD — GitHub Actions"
