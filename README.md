@@ -130,3 +130,53 @@ docker compose up -d
 ```bash
 docker compose down
 ```
+
+
+---
+
+## Project Structure
+```
+finops-app/
+├── .github/
+│   └── workflows/          # GitHub Actions CI/CD
+├── backend/
+│   ├── app/                # FastAPI application
+│   ├── tests/              # pytest tests
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── README.md
+├── frontend/
+│   ├── src/                # React application
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   └── README.md
+├── monitoring/
+│   ├── prometheus/         # Prometheus config
+│   ├── grafana/            # Grafana dashboards
+│   └── README.md
+├── docs/
+│   ├── architecture.md
+│   ├── ci-cd-flow.md
+│   └── adr/                # Architecture Decision Records
+├── docker-compose.yml
+├── .env.example
+├── CONTRIBUTING.md
+├── CHANGELOG.md
+└── LICENSE
+```
+
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
