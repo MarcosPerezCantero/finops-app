@@ -48,14 +48,15 @@
 
 ## Architecture
 
-mermaid
+## Architecture
+```mermaid
 graph TB
     subgraph "Docker Network"
-        FE[Frontend<br/>React + Nginx<br/>:3000]
-        BE[Backend<br/>FastAPI<br/>:8000]
-        DB[(PostgreSQL<br/>:5432)]
-        PROM[Prometheus<br/>:9090]
-        GRAF[Grafana<br/>:3001]
+        FE[FrontendReact + Nginx:3000]
+        BE[BackendFastAPI:8000]
+        DB[(PostgreSQL:5432)]
+        PROM[Prometheus:9090]
+        GRAF[Grafana:3001]
     end
 
     USER((User)) --> FE
@@ -69,3 +70,4 @@ graph TB
     style DB fill:#4169E1,stroke:#333,color:#fff
     style PROM fill:#E6522C,stroke:#333,color:#fff
     style GRAF fill:#F46800,stroke:#333,color:#fff
+```
