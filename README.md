@@ -96,3 +96,37 @@ graph TB
 | Monitoring     | Prometheus        | Metrics collection             |
 | Dashboards     | Grafana           | Metrics visualization          |
 | Testing        | pytest + Jest     | Unit & integration tests       |
+
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/) >= 24.0
+- [Docker Compose](https://docs.docker.com/compose/install/) >= 2.20
+- [Git](https://git-scm.com/)
+
+### Quick Start
+```bash
+# 1. Clone the repository
+git clone https://github.com/MarcosPerezCantero/finops-app
+cd finops-app
+
+# 2. Copy environment variables
+cp .env.example .env
+
+# 3. Start all services
+docker compose up -d
+
+# 4. Open the app
+# Frontend:  http://localhost:3000
+# Backend:   http://localhost:8000/docs
+# Grafana:   http://localhost:3001
+```
+
+### Stop Services
+```bash
+docker compose down
+```
